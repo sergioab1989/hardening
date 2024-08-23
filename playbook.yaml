@@ -1,5 +1,5 @@
 ---
-- name: pruebas de implementacion de ansible
+- name: pruebas de implementacion de hardening
   hosts: all
   gather_facts: false  
   roles:
