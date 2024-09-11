@@ -1,6 +1,6 @@
 ---
 - name: pruebas de implementacion de hardening en ambiente local
   hosts: all
-  gather_facts: true  
+  gather_facts: false 
   roles:
     - hardening-instalacion-config-software
