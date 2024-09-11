@@ -1,11 +1,16 @@
 ---
-- name: Configurar de splunkforwarder
-  ansible.builtin.expect:
-    command: /root/splunkforwarder/bin/splunk enable --accept-license
-    responses:
-        "Please enter an administrator username:":
-            - "sabarca@invoke.cl"
-        "Please enter a new password:":
-            - "{{ splunk_pass_encuesta }}"
-        "Please confirm new password:":
-            - "{{ splunk_pass_encuesta }}"
+- name: Extract tgz
+  ansible.builtin.unarchive:
+    src: /root/splunk/splunkforwarder-9.3.0-51ccf43db5bd-Linux-x86_64.tgz
+    dest: /root/splunk/
+
+# - name: Configurar de splunkforwarder
+#   ansible.builtin.expect:
+#     command: /root/splunkforwarder/bin/splunk enable --accept-license
+#     responses:
+#         "Please enter an administrator username:":
+#             - "sabarca@invoke.cl"
+#         "Please enter a new password:":
+#             - "{{ splunk_pass_encuesta }}"
+#         "Please confirm new password:":
+#             - "{{ splunk_pass_encuesta }}"
