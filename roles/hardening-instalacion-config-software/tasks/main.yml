@@ -3,6 +3,7 @@
   ansible.builtin.unarchive:
     src: /root/splunk/splunkforwarder-9.3.0-51ccf43db5bd-Linux-x86_64.tgz
     dest: /root/splunk/
+    remote_src: yes
 
 # - name: Configurar de splunkforwarder
 #   ansible.builtin.expect:
