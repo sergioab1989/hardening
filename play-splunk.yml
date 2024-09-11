@@ -3,8 +3,8 @@
     command: /root/splunkforwarder/bin/splunk enable --accept-license
     responses:
         "Please enter an administrator username:":
-            - "Anna"
+            - "sabarca@invoke.cl"
         "Please enter a new password:":
-            - "{{ db_username }}"
+            - "{{ splunk_pass_encuesta }}"
         "Please confirm new password:":
-            - "{{ db_password }}"
+            - "{{ splunk_pass_encuesta }}"
