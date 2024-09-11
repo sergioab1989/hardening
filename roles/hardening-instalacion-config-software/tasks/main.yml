@@ -5,6 +5,13 @@
     dest: /root/splunk/
     remote_src: yes
 
+- name: Ajustar permisos recursivamente
+  ansible.builtin.file:
+    path: "/root/splunk/splunkforwarder"
+    owner: "root"
+    group: "root"
+    recurse: yes
+
 # - name: Configurar de splunkforwarder
 #   ansible.builtin.expect:
 #     command: /root/splunkforwarder/bin/splunk enable --accept-license
