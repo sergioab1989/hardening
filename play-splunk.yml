@@ -1,0 +1,10 @@
+- name: Configurar de splunkforwarder
+  ansible.builtin.expect:
+    command: /root/splunkforwarder/bin/splunk enable --accept-license
+    responses:
+        "Please enter an administrator username:":
+            - "Anna"
+        "Please enter a new password:":
+            - "{{ db_username }}"
+        "Please confirm new password:":
+            - "{{ db_password }}"
