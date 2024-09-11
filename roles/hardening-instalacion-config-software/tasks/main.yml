@@ -1,13 +1,13 @@
-# ---
-# - name: Extract tgz
-#   ansible.builtin.unarchive:
-#     src: /root/splunk/splunkforwarder-9.3.0-51ccf43db5bd-Linux-x86_64.tgz
-#     dest: /root/splunk/
-#     remote_src: yes
+---
+- name: Extract tgz
+  ansible.builtin.unarchive:
+    src: /root/splunk/splunkforwarder-9.3.0-51ccf43db5bd-Linux-x86_64.tgz
+    dest: /opt/
+    remote_src: yes
 
 - name: Ajustar permisos recursivamente
   ansible.builtin.file:
-    path: "/root/splunk/splunkforwarder"
+    path: "/opt/splunkforwarder"
     owner: "root"
     group: "root"
     recurse: yes
